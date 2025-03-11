@@ -1,8 +1,6 @@
 title: SmTHmIoT
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+
 permalink: ":title/"
 # baseurl: "/flexible-jekyll" # the subpath of your site, e.g. /blog
 baseurl: ""
@@ -10,13 +8,13 @@ url: "https://smthmiot.github.io" # the base hostname & protocol for your site, 
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: Galler-ist # add your name
-author-img: galler-ist.png # add your photo
-about-author: This is Smart Home project page. I am "galler-ist" who likes board games.
+author: SmtHmIoT # add your name
+author-img: Raspberry-Pi-Photo.jpg # add your photo
+about-author: This is a Smart Home IoT system that checks the home environment using four sensors - humidity, temperature, sound, and light. It adjusts these values for optimal living conditions.
 # social-twitter: # add your Twitter handle
 # social-facebook: # add your Facebook handle
 social-github: SmtHmIoT # add your Github handle
-social-notion: https://habitual-sawfish-65b.notion.site/PJT-c0507b313564419ea1667698be74759e # notion example
+social-notion: https://www.naver.com # notion example
 social-email: swghj0609@gmail.com # add your Email address
 # social-linkedin: # add your Linkedin handle
 
