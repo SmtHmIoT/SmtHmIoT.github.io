@@ -9,19 +9,6 @@ tags: [Project, IoT, SmartHome]
 
 [RPi GPIO Code Samples](https://elinux.org/RPi_GPIO_Code_Samples#Direct_register_access)
 
-{% capture link1 %}
-https://elinux.org/RPi_GPIO_Code_Samples#Direct_register_access
-{% endcapture %}
-{% assign thumbnail1 = link1 | link_thumbnailer %}
-
-<div class="link-preview">
-  <a href="{{ thumbnail1.url }}">
-    <img src="{{ thumbnail1.images | first }}" alt="{{ thumbnail1.title }}">
-    <h3>{{ thumbnail1.title }}</h3>
-    <p>{{ thumbnail1.description }}</p>
-  </a>
-</div>
-
 이 페이지에서 참고하여 Direct Access를 하는 법을 보겠다.
 
 ### GPIO 시작 레지스터 주소(PERI_BASE) 설정
@@ -130,13 +117,7 @@ volatile unsigned *gpio;
 
 (2012년도의 임베디드 개발자분.. 최고십니다..! 블로그가 네이버지만 믿음이 너무 가는 그런 마법..)
 
-[https://blog.naver.com/eslectures/80143556699](https://blog.naver.com/eslectures/80143556699)
-
-[C 언어의 volatile 키워드
-
-volatile은 C 언어의 많은 키워드 (keyword) 중에서 사용 빈도도 낮고 아마도 프로그래머들이 가장 잘 이...
-
-blog.naver.com](https://blog.naver.com/eslectures/80143556699)
+[C 언어의 volatile 키워드](https://blog.naver.com/eslectures/80143556699)
 
 (대충 while문을 돌릴 때 define 한 상수에 대해서 최적화 시 한 번만 확인하는데, 이를 volatile로 하면 define 한 상수나 주소를 계속 확인한다)
 
@@ -195,7 +176,7 @@ void setup_io()
 } // setup_io
 ```
 
-우선 open 함수를 통해, /dev/mem을 열어 메모리에 직접 접근하며, O_RDWR | O_SYNC 옵션을 사용하여 읽기/쓰기가 가능하며 동기화 된 상태로 열게된다.
+<p>우선 open 함수를 통해, /dev/mem을 열어 메모리에 직접 접근하며, O_RDWR | O_SYNC 옵션을 사용하여 읽기/쓰기가 가능하며 동기화 된 상태로 열게된다.</p>
 
 이후 mmap 함수를 통해 GPIO의 레지스터 영역을 가상 메모리에 매핑하여, gpio_map은 GPIO 물리 주소에 대한 포인터가 된다.
 
