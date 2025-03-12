@@ -1,16 +1,66 @@
 <section class="comment-area">
   <div class="comment-wrapper">
     {% if site.discus-identifier %}
+    <!-- Disqus 광고 차단을 위한 스타일 추가 -->
+    <style type="text/css">
+      /* Disqus 광고 및 추천 영역 숨기기 */
+      #disqus_recommendations,
+      iframe[id^="dsq-app"][src*="recommendations"],
+      iframe[src*="ads-iframe"],
+      iframe[src*="taboola"],
+      iframe[id^="indicator-north"],
+      iframe[id^="indicator-south"],
+      iframe[sandbox*="allow-forms"][src*="tempest.services.disqus.com"] {
+        display: none !important;
+        height: 0 !important;
+        width: 0 !important;
+        min-height: 0 !important;
+        min-width: 0 !important;
+        max-height: 0 !important;
+        max-width: 0 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        position: absolute !important;
+        left: -9999px !important;
+        pointer-events: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        overflow: hidden !important;
+      }
+
+      /* 댓글 스레드 영역 스타일 최적화 */
+      #disqus_thread {
+        padding-top: 20px !important;
+        margin-bottom: 20px !important;
+      }
+    </style>
+
     <div id="disqus_thread" class="article-comments"></div>
     <script>
-      (function() {
-          var d = document, s = d.createElement('script');
-          s.src = '//{{ site.discus-identifier }}.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
+      (function () {
+        var d = document,
+          s = d.createElement("script");
+        s.src = "//{{ site.discus-identifier }}.disqus.com/embed.js";
+        s.setAttribute("data-timestamp", +new Date());
+        (d.head || d.body).appendChild(s);
+
+        // Disqus 로드 후 추가 스타일 적용
+        setTimeout(function () {
+          var style = document.createElement("style");
+          style.textContent =
+            'iframe[src*="ads"], iframe[src*="recommendations"] { display: none !important; }';
+          document.head.appendChild(style);
+        }, 2000);
       })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript
+      >Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript"
+        >comments powered by Disqus.</a
+      ></noscript
+    >
     {% endif %}
   </div>
-</section> <!-- End Comment Area -->
+</section>
+<!-- End Comment Area -->
