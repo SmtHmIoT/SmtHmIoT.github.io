@@ -17,6 +17,28 @@ layout: default
     </div>
   </header>
   <!-- End Header -->
+  <!-- Categories Section -->
+  <section class="categories">
+    <h3 class="categories-title">카테고리</h3>
+    <ul class="categories-list">
+      <!-- 전체 보기 항목 추가 -->
+      <li>
+        <a href="{{ site.baseurl }}/" class="all-posts">
+          전체 보기 ({{ site.posts | size }})
+        </a>
+      </li>
+      {% for category in site.categories %} {% capture category_name %}{{
+      category | first }}{% endcapture %}
+      <li>
+        <a href="{{ site.baseurl }}/categories/{{ category_name | slugize }}/">
+          {{ category_name }} ({{ site.categories[category_name].size }})
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <!-- End Categories Section -->
+
   <footer>
     <section class="contact">
       <h3 class="contact-title">Contact me</h3>

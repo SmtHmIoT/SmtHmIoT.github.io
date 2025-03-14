@@ -5,6 +5,7 @@ date: 2025-03-11 19:32:20 +0900
 description: 라즈베리파이를 C언어로 컨트롤하자 - 레지스터 직접 접근 방법 이해 # Add post description (optional)
 img:
 tags: [Project, IoT, SmartHome]
+categories: [Embedded]
 ---
 
 [RPi GPIO Code Samples](https://elinux.org/RPi_GPIO_Code_Samples#Direct_register_access)

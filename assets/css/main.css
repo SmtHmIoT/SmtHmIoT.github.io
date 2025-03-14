@@ -1223,6 +1223,48 @@ a.newer-posts:hover {
   transform: translateX(-5px);
 }
 
+.sidebar-categories {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.sidebar-categories h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 5px;
+}
+
+.sidebar-categories ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar-categories li {
+  margin-bottom: 8px;
+}
+
+.sidebar-categories a {
+  text-decoration: none;
+}
+
+.category-page .category-title {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.all-posts {
+  font-weight: 700;
+  color: #263959;
+}
+
+.all-posts:hover {
+  color: #2eb695;
+}
+
 /* - - - - - - - - - - Post Page Styles - - - - - - - - - - */
 .wrap-content {
   padding: 20px;

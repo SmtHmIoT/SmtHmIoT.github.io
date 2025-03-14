@@ -5,6 +5,7 @@ date: 2025-02-28 18:32:20 +0900
 description: Finally I start this Github blog page. # Add post description (optional)
 img: flaticon-start.png
 tags: [Project, IoT, SmartHome]
+categories: [Start]
 ---
 
 Hello, My name is Galler-ist
